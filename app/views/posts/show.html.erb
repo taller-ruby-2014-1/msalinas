@@ -13,26 +13,10 @@
 			  <%= @post.text %>
 			
 		</div>
-	
-	<h2>Agrega un comentario:</h2>
-	<%= form_for([@post, @post.comments.build]) do |f| %>
-	  <p>
-	    <%= f.label :commenter %><br />
-	    <%= f.text_field :commenter %>
-	  </p>
-	  <p>
-	    <%= f.label :body %><br />
-	    <%= f.text_area :body %>
-	  </p>
-	  <p>
-	    <%= f.submit %>
-	  </p>
-	<% end %>
 	<h2>Comentarios</h2>
+	<%= render "comments/form" %>
 	<% @post.comments.each do |comment| %>
-		<%= render "comments/form" %>
-		
-
+		<%unless(comment.commenter.blank?)%>
 		  <p>
 		    <strong>Commenter:</strong>
 		    <%= comment.commenter %>
@@ -43,6 +27,7 @@
 		    <%= comment.body %>
 		  </p>
 		<% end %>
+	<% end %>
 	</div>	
 <div style= "positon: center; margin-top: 10px;" 	class="link"> 
 	<%= link_to 'Back', posts_path %>	
