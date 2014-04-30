@@ -7,13 +7,13 @@
 
 .title
 {
-	margin: auto;
+	margin-left: 45%;
 }
 
-.links
+.link
 {
 	text-decoration: none;
-	margin: auto;
+	margin-left: 45%;
 }
 .button {
   font: bold 11px Arial;
@@ -25,4 +25,6 @@
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
+  list-style: none;
+  text-decoration: none;
 }
