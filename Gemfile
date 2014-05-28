@@ -48,3 +48,6 @@ end
 gem 'devise'
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch=>'bootstrap3'
+
+gem 'mysql2', :group => [:production]
+gem 'sqlite3', :group => [:development, :test]
